@@ -1,0 +1,12 @@
+{
+    "name": "Smash it",
+ "short_name": "smash",
+ "theme_color": "#222831",
+ "background_color": "#ffad17",
+ "display": "standalone",
+ "Scope": "",
+ "start_url": "/index.html",
+ "icons": [
+"/assets/icons/10d.png" 
+]
+}
