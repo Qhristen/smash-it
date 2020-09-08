@@ -38,20 +38,13 @@ form.addEventListener('submit', e =>{
       localStorage.setItem('name', name)
       localStorage.setItem('sys', sys.country)
       localStorage.setItem('weather', weather[0]["description"])
-      const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${
-        weather[0]["icon"] || localStorage.getItem('icon')
-      }.svg`;
       localStorage.setItem('icon', icon)
+        const icon = `https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/${
+          weather[0]["icon"] || localStorage.getItem('icon')
+        }.svg`;
 
-      if(typeof localStorage !== 'undefined'){
-        iconEl.src =  localStorage.getItem('icon');
-        iconEl.alt =  localStorage.getItem('icon');
-        Temp.innerHTML = `${localStorage.getItem('temp')} <sup> °C </sup>`;
-        desc.textContent = localStorage.getItem('weather');
-        cityName.innerHTML = `${localStorage.getItem('name')}  <sup> ${localStorage.getItem('sys')} </sup>`;
-        searchedWeather.style.display = 'block';
-      }
-
+      populateWeather();
+console.log(__dirname, 'did');
     //   const li = document.createElement("li");
     //   li.style.listStyleType = "none"
     //   li.classList.add("city");
@@ -84,6 +77,19 @@ form.addEventListener('submit', e =>{
 
 })
 
+
+const populateWeather = () =>{
+  if(typeof localStorage !== 'undefined'){
+    iconEl.src =  localStorage.getItem('icon');
+    iconEl.alt =  localStorage.getItem('icon');
+    Temp.innerHTML = `${localStorage.getItem('temp')} <sup> °C </sup>`;
+    desc.textContent = localStorage.getItem('weather');
+    cityName.innerHTML = `${localStorage.getItem('name')}  <sup> ${localStorage.getItem('sys')} </sup>`;
+    searchedWeather.style.display = 'block';
+  }
+}
+document.querySelector('.date').textContent = new Date()
+populateWeather();
 
 // C to F conversion
 function celsiusToFahrenheit(temperature){
