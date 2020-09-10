@@ -1,33 +1,34 @@
-*{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-body{
+body {
   background-color: #ffffff;
 
   margin: 0;
 }
 
-ul{
+ul {
   text-decoration: none;
   list-style-type: none;
 }
 
-li{
+li {
   color: black;
   text-decoration: none;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
-.search{
+.search {
   display: grid;
   place-items: center;
-padding-top: 3rem;
+  padding-top: 3rem;
   /* float: right; */
 }
 
-.cities{
+.cities {
   display: grid;
   grid-template-columns: auto auto auto;
 }
@@ -36,8 +37,7 @@ padding-top: 3rem;
   flex: 1 1 30%;
 } */
 
-
-.searched-weather{
+.searched-weather {
   display: none;
   padding: 2rem;
   margin: 0 auto;
@@ -50,36 +50,37 @@ padding-top: 3rem;
   margin-top: 4rem;
   color: black;
 }
-.city-icon{
+.city-icon {
   color: white;
 }
 
-.searched-weather .city-name, .city-temp{
+.searched-weather .city-name,
+.city-temp {
   text-align: center;
 }
 
-.city-temp{
+.city-temp {
   font-size: 2rem;
 }
 
-form input{
+form input {
   width: 70vh;
 }
 
-form input, form button{
+form input,
+form button {
   border: 2px solid #0099ff;
   padding: 1rem;
-  border-radius: .5rem;
-  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 2rem;
 }
-form button{
+form button {
   color: rgb(241, 241, 241);
   background: #0099ff;
   cursor: pointer;
 }
 
-
-.logo{
+.logo {
   display: grid;
   place-items: center;
   /* background-color: rgb(119, 0, 231); */
@@ -90,21 +91,20 @@ form button{
   margin: 0;
   margin-top: 1rem;
 }
-.logo h3{
+.logo h3 {
   margin-block-start: 0.2em;
 }
-.container{
- display: grid;
- place-items: center;
+.container {
+  display: grid;
+  place-items: center;
 }
 
-
-.notification{
+.notification {
   background-color: #f8d7da;
   display: none;
 }
 
-.notification p{
+.notification p {
   color: #721c24;
   font-size: 1.2em;
   margin: 0;
@@ -112,10 +112,10 @@ form button{
   padding: 10px 0;
 }
 
-.weather-container{
+.weather-container {
   display: block;
   /* top: -0.2%; */
-  background-image: url(/assets/images/wave\ bg.svg);
+  background-image: url(/assets/images/wavebg.svg);
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
@@ -125,24 +125,24 @@ form button{
   /* background-color: rgb(119, 0, 231); */
 }
 
-.icon{
+.icon {
   color: white;
   width: 300px;
   height: 128px;
 }
 
-.weather-icon img{
+.weather-icon img {
   display: block;
   margin: 0 auto;
 }
 
-.temperature-value{
+.temperature-value {
   color: white;
   width: 300px;
-  height:60px;
+  height: 60px;
 }
 
-.temperature-value p{
+.temperature-value p {
   padding: 0;
   margin: 0;
   color: #ffffff;
@@ -151,14 +151,12 @@ form button{
   cursor: pointer;
 }
 
-
-.temperature-value span{
+.temperature-value span {
   color: #ffffff;
   font-size: 0.5em;
 }
 
-
-.temperature-description p{
+.temperature-description p {
   padding: 8px;
   margin: 0;
   color: #ffffff;
@@ -166,7 +164,7 @@ form button{
   font-size: 1.2em;
 }
 
-.location p{
+.location p {
   margin: 0;
   padding: 0;
   color: #ffffff;
@@ -174,33 +172,32 @@ form button{
   font-size: 0.8em;
 }
 @media (min-width: 320px) and (max-width: 480px) {
-  
-    .searched-weather{
-      padding: 1rem;
-    }
+  .searched-weather {
+    padding: 1rem;
+  }
 
-    form input{
-      width: 39vh;
-      font-size: 1rem;
-    }
+  form input {
+    width: 39vh;
+    font-size: 1rem;
+  }
 
-    form button{
-      width: 45vh;
-      background: #0078c9;
-      margin-top: .4rem;
-    }
+  form button {
+    width: 45vh;
+    background: #0078c9;
+    margin-top: 0.4rem;
+  }
 
-    .cities{
-      display: grid;
-      grid-template-columns: auto;
-    }
-.container{
-  width: 80%;
-}
+  .cities {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .container {
+    width: 80%;
+  }
 
-.searched-weather{
-  padding: 1.2rem;
-  margin-top: 1rem;
-margin-left: 3rem; 
-}
+  .searched-weather {
+    padding: 1.2rem;
+    margin-top: 1rem;
+    margin-left: 3rem;
+  }
 }
