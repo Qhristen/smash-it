@@ -85,10 +85,13 @@ const populateWeather = () => {
     cityName.innerHTML = `${localStorage.getItem("name") || ""}  <sup> ${
       localStorage.getItem("sys") || ""
     } </sup>`;
-    let month = new Date().getMonth();
-    let date = new Date().getDate();
-    let year = new Date().getFullYear();
-    dateNow.textContent = `${date}/${month}/${year}`;
+    var options = {
+      weekday: "short",
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    };
+    dateNow.textContent = new Date().toLocaleTimeString("en-us", options);
     dateNow.style.margin = "0 auto";
     searchedWeather.prepend(dateNow);
     searchedWeather.style.display = "block";
